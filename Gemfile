@@ -50,6 +50,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Activate rails_panel
   gem 'meta_request'
+
+  gem "overcommit", require: false
+  gem "rubocop", '~> 0.52.0', require: false
+  gem "rubocop-rails", require: false
+  gem "reek", require: false
+  gem "rails_best_practices", require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

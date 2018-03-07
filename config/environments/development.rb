@@ -27,12 +27,12 @@ Rails.application.configure do
   end
 
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => ENV["DOMAIN_NAME"] }
+  config.action_mailer.default_url_options = { host: ENV["DOMAIN_NAME"] }
   config.action_mailer.delivery_method = :smtp
 
   # Send email in development mode?
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.default charset: "utf-8"
   config.action_mailer.smtp_settings = {
     address: ENV["EMAIL_SERVER"],
     port: ENV.fetch("EMAIL_SERVER_PORT") { 587 },

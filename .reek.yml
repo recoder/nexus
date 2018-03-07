@@ -1,0 +1,14 @@
+---
+
+IrresponsibleModule:
+  enabled: false
+
+DuplicateMethodCall:
+  max_calls: 2
+
+UtilityFunction:
+  public_methods_only: true
+
+exclude_paths:
+  - db/migrate/
+  - spec/support/
