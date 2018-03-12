@@ -3,7 +3,7 @@ inherit_gem:
     - config/rails.yml
 
 Style/FrozenStringLiteralComment:
-  EnforcedStyle: never
+  Enabled: false
 
 Style/StringLiterals:
   Enabled: false
