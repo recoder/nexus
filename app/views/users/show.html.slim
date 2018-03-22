@@ -1,0 +1,13 @@
+p#notice = notice
+
+p
+  strong Nickname:
+  = @user.nickname
+p
+  strong Email:
+  = @user.email
+p
+  strong Language:
+  = @user.language
+
+=< link_to 'Back', users_path
