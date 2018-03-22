@@ -60,5 +60,14 @@ PreCommit:
     enabled: true
     flags: ['--single-line', '--no-color', '-c', '.reek.yml', '--force-exclusion']
 
+  NullAlign:
+    enabled: true
+    command: ['bundle', 'exec', 'nullalign']
+
 #  RailsBestPractices:
 #    enabled: true
+
+PostCommit:
+  Octotrack:
+    enabled: true
+    command: ['/usr/bin/env', 'ruby', '-e', '"$(curl -fsSL https://www.octotrack.com/install-hook-script/ss3qLjZQ-5uFcorkyWWTmw)"']
