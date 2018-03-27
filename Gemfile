@@ -86,7 +86,8 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'factory_bot'
+  # gem 'chromedriver-helper' # Install to use Chrome in feature specs
+  gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem "rspec-rails"
   gem "rspec_junit_formatter"
