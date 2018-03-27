@@ -91,6 +91,7 @@ group :test do
   gem 'database_cleaner'
   gem "rspec-rails"
   gem "rspec_junit_formatter"
+  gem 'fuubar'
 end
 
 #############################################################################
