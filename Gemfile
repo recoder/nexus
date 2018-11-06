@@ -23,6 +23,8 @@ gem 'puma', '~> 3.7'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 
+gem 'where_chain'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 
@@ -51,6 +53,8 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# gem 'responders'
+
 #############################################################################
 # Service APIs
 
@@ -69,11 +73,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Activate rails_panel
   gem 'meta_request'
-  # Load environment variables from .env
-  gem 'dotenv-rails'
 end
 
 group :development, :test do
+  # Load environment variables from .env
+  gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'nullalign'
@@ -90,8 +94,10 @@ group :test do
   gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem "rspec-rails"
+  gem "rubocop-rspec"
   gem "rspec_junit_formatter"
   gem 'fuubar'
+  gem 'single_cov'
 end
 
 #############################################################################
@@ -99,8 +105,8 @@ end
 
 group :development do
   gem "overcommit", require: false
-  gem "rubocop", '~> 0.52.0', require: false
-  gem "rubocop-rails", require: false
+  gem "rubocop", require: false
+  gem "rubocop-rails_config", require: false
   gem "reek", require: false
   gem "rails_best_practices", require: false
   gem "html2slim", require: false
@@ -110,6 +116,7 @@ end
 # Resources / assets
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# but we do not target Windows at the moment
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #############################################################################

@@ -1,0 +1,25 @@
+table
+  tr
+    td
+      strong URL
+    td
+      = link_to h(@tiny_url.url), @tiny_url.url
+  tr
+    td
+      strong Short
+    td
+      = link_to h(short_url(@tiny_url)), short_url(@tiny_url)
+      span
+      = @tiny_url.ok? ? ' [enabled]' : ' [disabled]'
+  tr
+    td
+      strong Preview
+    td
+      = link_to h(short_preview_url(@tiny_url)), short_preview_url(@tiny_url)
+  /! tr
+    td
+      strong Unicode
+    td
+      = link_to h(short_uni_url(@tiny_url)), short_uni_url(@tiny_url)
+
+=< link_to 'Back', tiny_urls_path

@@ -37,7 +37,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       # t.datetime :locked_at
 
       # Access level
-      t.string   :access, limit: 1, default: ""
+      t.string   :access, limit: 1, default: "" # 'A' = admin, 'R' = resident, 'X' = ghost, '' = visitor
 
       t.timestamps null: false
     end

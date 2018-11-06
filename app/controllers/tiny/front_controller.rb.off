@@ -1,0 +1,9 @@
+class Tiny::FrontController < ApplicationController
+  before_action :authenticate_user!
+
+  # TODO: check if authorized
+  def show
+    @url = Tiny::Url.new
+    respond_to :html
+  end
+end

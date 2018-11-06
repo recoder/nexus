@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320195659) do
+ActiveRecord::Schema.define(version: 20180328170650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "tiny_urls", force: :cascade do |t|
+    t.string "user_id", null: false
+    t.string "slug", null: false
+    t.string "url", null: false
+    t.string "state", default: ""
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_tiny_urls_on_slug", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,7 +39,7 @@ ActiveRecord::Schema.define(version: 20180320195659) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.string "access", limit: 1, default: "" # 'A' = admin, 'R' = resident, 'X' = ghost, '' = visitor
+    t.string "access", limit: 1, default: ""
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

@@ -1,0 +1,18 @@
+h1 Create your own tiny URL
+
+- if @tiny_url.errors.any?
+  #error_explanation
+    h2 = "#{pluralize(@tiny_url.errors.count, "error")} prohibited this tiny_url from being saved:"
+    ul
+      - @tiny_url.errors.full_messages.each do |message|
+        li = message
+
+= form_for(@tiny_url) do |f|
+  div.field
+    = f.label :url
+    = f.text_field :url, placeholder: 'long URL'
+  div.field
+    = f.label :slug
+    = f.text_field :slug, placeholder: 'optional'
+  div.actions
+    = f.submit

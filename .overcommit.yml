@@ -37,22 +37,13 @@ PreCommit:
   ALL:
     on_warn: fail
 
-  MessageFormat:
-    enabled: true
-
   AuthorEmail:
-    enabled: true
-
-  HardTabs:
     enabled: true
 
   AuthorName:
     enabled: true
 
   MergeConflicts:
-    enabled: true
-
-  RussianNovel:
     enabled: true
 
   YamlSyntax:

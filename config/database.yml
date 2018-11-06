@@ -86,4 +86,4 @@ production:
   <<: *default
   database: nexvs_production
   username: nexvs
-#  password: <%= ENV['NEXVS_DATABASE_PASSWORD'] %>
+  password: <%= ENV['NEXVS_DATABASE_PASSWORD'] %>

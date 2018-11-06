@@ -1,0 +1,23 @@
+h1 Listing tiny_urls
+
+table
+  thead
+    tr
+      th User
+      th Slug
+      th Url
+      th Enabled
+      th
+      th
+
+  tbody
+    - @tiny_urls.each do |tiny_url|
+      tr
+        td = tiny_url.user_id
+        td = tiny_url.slug
+        td = link_to tiny_url.url, tiny_url.url
+        td = tiny_url.ok?
+        td = link_to 'Show', tiny_url
+        td = link_to 'Destroy', tiny_url, data: { confirm: 'Are you sure?' }, method: :delete
+
+= link_to 'New URL', tiny_path

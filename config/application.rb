@@ -7,6 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module Nexvs
+  # Configure our application
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
@@ -15,7 +16,6 @@ module Nexvs
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Auto-load library classes
     config.autoload_paths += %W(#{config.root}/app/lib)
   end
 end
