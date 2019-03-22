@@ -75,9 +75,11 @@ group :development do
   gem 'meta_request'
 end
 
+gem 'dotenv-rails', github: "bkeepers/dotenv", require: 'dotenv/rails-now'
+
 group :development, :test do
   # Load environment variables from .env
-  gem 'dotenv-rails'
+  # gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'nullalign'
@@ -98,6 +100,22 @@ group :test do
   gem "rspec_junit_formatter"
   gem 'fuubar'
   gem 'single_cov'
+end
+
+#############################################################################
+# Deployment
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rbenv', require: false
+  gem 'capistrano-rake', require: false
+  # gem 'capistrano-puma'
+  gem 'capistrano3-puma', require: false
+  # gem 'capistrano-secrets-yml'
+  # gem 'capistrano-dotenv', require: false
+  gem 'capistrano-nginx'
 end
 
 #############################################################################

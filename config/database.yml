@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: nexvs_production
-  username: nexvs
-  password: <%= ENV['NEXVS_DATABASE_PASSWORD'] %>
+  database: <%= ENV.fetch('POSTGRES_DB') { 'nexvs' } %>
+  username: <%= ENV.fetch('POSTGRES_USER') { 'nexvs' } %>
+  password: <%= ENV['NEXVS_DATABASE_PASSWORD'] || ENV.fetch('POSTGRES_PASSWORD') { 'postgres' } %>
