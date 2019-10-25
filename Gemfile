@@ -1,15 +1,19 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby '2.6.5'
+
+source 'https://rubygems.org'
 
 #############################################################################
 # Core
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.5'
+gem 'rails', '~> 6.0'
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -26,6 +30,9 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 
+# Use Active Storage variant
+# gem 'image_processing', '~> 1.2'
+
 #############################################################################
 # Security
 
@@ -34,7 +41,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 
 gem 'devise'
 
-gem 'cancancan', '~> 2.0'
+gem 'cancancan', '~> 3.0'
 
 #############################################################################
 # Presentation
@@ -45,17 +52,19 @@ gem "slim-rails"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker', '~> 4.0'
 
 #############################################################################
 # Service APIs
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.7'
 
 #############################################################################
 # Development/testing
@@ -84,8 +93,10 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
+  gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  # Easy installation and use of web drivers to run system tests with browsers
+  gem 'webdrivers'
   # gem 'chromedriver-helper' # Install to use Chrome in feature specs
   gem 'factory_bot_rails'
   gem 'database_cleaner'
@@ -99,7 +110,7 @@ end
 
 group :development do
   gem "overcommit", require: false
-  gem "rubocop", '~> 0.52.0', require: false
+  gem "rubocop", '~> 0.70.0', require: false
   gem "rubocop-rails", require: false
   gem "reek", require: false
   gem "rails_best_practices", require: false
@@ -110,6 +121,7 @@ end
 # Resources / assets
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# but we do not target Windows at the moment
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #############################################################################
