@@ -110,7 +110,7 @@ end
 
 group :development do
   gem "overcommit", require: false
-  gem "rubocop", '~> 0.70.0', require: false
+  gem "rubocop", '~> 0.75.1', require: false
   gem "rubocop-rails", require: false
   gem "reek", require: false
   gem "rails_best_practices", require: false
