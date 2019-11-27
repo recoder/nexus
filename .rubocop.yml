@@ -1,9 +1,34 @@
-inherit_gem:
-  rubocop-rails:
-    - config/rails.yml
+require:
+ - rubocop-rails
+
+AllCops:
+#  EnabledByDefault: true
+  Exclude:
+    - 'app/models/ability.rb'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/*'
+    - 'db/**/*'
+    - 'spec/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+#    - !ruby/regexp /old_and_unused\.rb$/
 
 Style/FrozenStringLiteralComment:
   Enabled: false
 
 Style/StringLiterals:
   Enabled: false
+
+# TODO: enable to smth reasonable
+Metrics/LineLength:
+  Enabled: false
+
+# TODO: gradually add documentation
+Style/Documentation:
+  Enabled: false
+
+Style/SymbolArray:
+#  Enabled: false
+  EnforcedStyle: brackets
+#  MinSize: 2

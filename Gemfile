@@ -70,10 +70,10 @@ gem 'jbuilder', '~> 2.7'
 # Development/testing
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.3'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
+  # https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Activate rails_panel
@@ -98,23 +98,23 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
   # gem 'chromedriver-helper' # Install to use Chrome in feature specs
-  gem 'factory_bot_rails'
   gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'fuubar'
   gem "rspec-rails"
   gem "rspec_junit_formatter"
-  gem 'fuubar'
 end
 
 #############################################################################
 # Tools
 
 group :development do
+  gem "html2slim", require: false
   gem "overcommit", require: false
+  gem "rails_best_practices", require: false
+  gem "reek", require: false
   gem "rubocop", '~> 0.76.0', require: false
   gem "rubocop-rails", require: false
-  gem "reek", require: false
-  gem "rails_best_practices", require: false
-  gem "html2slim", require: false
 end
 
 #############################################################################
