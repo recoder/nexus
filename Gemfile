@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
-source 'https://rubygems.org'
+gem 'bundler', '~> 2.0'
 
 #############################################################################
 # Core
@@ -13,7 +13,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 6.0'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '~> 1.4', require: false
 
 # Use Puma as the app server
 gem 'puma', '~> 4.3'
