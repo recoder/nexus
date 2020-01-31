@@ -4,7 +4,7 @@
 
 unless Rails.application.secrets.admin_email.blank?
   username = Rails.application.secrets.admin_email
-  password = Rails.application.secrets.admin_password || "admin!"
+  password = Rails.application.secrets.admin_password || "admin!!!"
 
   User.find_or_create_by!(email: Rails.application.secrets.admin_email) do |user|
     user.nickname = 'admin'
@@ -15,6 +15,7 @@ unless Rails.application.secrets.admin_email.blank?
     if Devise.mappings[:user].confirmable?
       user.confirm
     end
+    puts "Created #{user.nickname} user for #{user.email} with password #{user.password}"
   end
 end
 

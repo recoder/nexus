@@ -81,5 +81,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.hosts << "recoder.andrewz.org"
+  config.hosts << ENV['DOMAIN_NAME'] unless ENV['DOMAIN_NAME'].blank?
 end
