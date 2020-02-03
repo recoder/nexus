@@ -61,7 +61,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', '~> 4.2'
 
 gem "bootstrap_form", "~> 4.0"
-gem 'devise-bootstrap-form', '<= 0.2.0'
+gem 'devise-bootstrap-form', '<= 0.4.0'
 
 #############################################################################
 # Service APIs
