@@ -234,14 +234,14 @@ GEM
     rspec-support (3.9.2)
     rspec_junit_formatter (0.4.1)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubocop (0.80.1)
+    rubocop (0.81.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.7.0.1)
       rainbow (>= 2.2.2, < 4.0)
       rexml
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
     rubocop-rails (2.5.0)
       activesupport
       rack (>= 1.1)
@@ -292,7 +292,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    unicode-display_width (1.6.1)
+    unicode-display_width (1.7.0)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (4.0.1)
@@ -345,7 +345,7 @@ DEPENDENCIES
   reek
   rspec-rails
   rspec_junit_formatter
-  rubocop (~> 0.80.1)
+  rubocop (~> 0.81.0)
   rubocop-rails
   sass-rails (~> 6)
   selenium-webdriver
