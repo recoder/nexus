@@ -60,7 +60,7 @@ gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.1'
 
-gem "bootstrap_form", "~> 4.4"
+gem "bootstrap_form", "~> 4.5"
 gem 'devise-bootstrap-form', '<= 0.4.0'
 
 #############################################################################
