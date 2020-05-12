@@ -118,7 +118,6 @@ GEM
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
-    jaro_winkler (1.5.4)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
     json (2.3.0)
@@ -151,7 +150,7 @@ GEM
       childprocess (>= 0.6.3, < 4)
       iniparse (~> 1.4)
     parallel (1.19.1)
-    parser (2.7.1.0)
+    parser (2.7.1.2)
       ast (~> 2.4.0)
     pg (1.2.3)
     psych (3.1.0)
@@ -234,8 +233,7 @@ GEM
     rspec-support (3.9.2)
     rspec_junit_formatter (0.4.1)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubocop (0.81.0)
-      jaro_winkler (~> 1.5.1)
+    rubocop (0.83.0)
       parallel (~> 1.10)
       parser (>= 2.7.0.1)
       rainbow (>= 2.2.2, < 4.0)
@@ -345,7 +343,7 @@ DEPENDENCIES
   reek
   rspec-rails
   rspec_junit_formatter
-  rubocop (~> 0.81.0)
+  rubocop (~> 0.83.0)
   rubocop-rails
   sass-rails (~> 6)
   selenium-webdriver
