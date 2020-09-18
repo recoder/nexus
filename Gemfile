@@ -16,7 +16,7 @@ gem 'rails', '~> 6.0'
 gem 'bootsnap', '~> 1.4', require: false
 
 # Use Puma as the app server
-gem 'puma', '~> 4.3'
+gem 'puma', '~> 5.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
