@@ -10,7 +10,7 @@ gem 'bundler', '~> 2.0'
 # Core
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0'
+gem 'rails', '~> 6.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.5', require: false
