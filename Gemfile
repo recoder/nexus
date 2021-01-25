@@ -67,7 +67,7 @@ gem 'devise-bootstrap-form', '<= 0.4.0'
 # Service APIs
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.10'
+gem 'jbuilder', '~> 2.11'
 
 #############################################################################
 # Development/testing
