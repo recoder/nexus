@@ -163,7 +163,7 @@ GEM
     pg (1.2.3)
     psych (3.3.1)
     public_suffix (4.0.6)
-    puma (5.2.2)
+    puma (5.3.0)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -349,7 +349,7 @@ DEPENDENCIES
   nullalign
   overcommit
   pg (>= 0.18, < 2.0)
-  puma (~> 5.2)
+  puma (~> 5.3)
   rails (~> 6.1)
   rails_best_practices
   reek
