@@ -116,7 +116,7 @@ group :development do
   gem "overcommit", require: false
   gem "rails_best_practices", require: false
   gem "reek", require: false
-  gem "rubocop", '~> 0.86.0', require: false
+  gem "rubocop", '~> 1.18.1', require: false
   gem "rubocop-rails", require: false
 end
 
